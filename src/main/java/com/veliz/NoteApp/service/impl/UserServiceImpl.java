@@ -51,6 +51,13 @@ public class UserServiceImpl implements UserService {
     //New rVeliz
     //New vVeliz
 
+    //New
+    //New//New//New//New//New//New//New
+
+    //Agregando
+    //Agregando
+    //Agregando
+
     @Override
     public List<UserDTO> listUser() {
         return userMapper.userListToUserDTOList(userDAO.findAll());
