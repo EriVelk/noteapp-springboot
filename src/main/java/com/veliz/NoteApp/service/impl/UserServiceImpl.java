@@ -28,6 +28,7 @@ public class UserServiceImpl implements UserService {
         if(!userDAO.existsByEmail(userDTO.getEmail())){
             userDTO.setStatus(Boolean.TRUE);
             userDTO.setRegisterDate(LocalDateTime.now());
+            //Retorna
             return userMapper.userToUserDTO(userDAO.save(userMapper.userDTOToUser(userDTO)));
         }else{
             throw new InvalidDataException(EMAIL_EXIST);
