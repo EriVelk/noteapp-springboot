@@ -48,15 +48,7 @@ public class UserServiceImpl implements UserService {
     public void deleteUser(Long id) {
         userDAO.deleteById(id);
     }
-    //New rVeliz
-    //New vVeliz
 
-    //New
-    //New//New//New//New//New//New//New
-
-    //Agregando
-    //Agregando
-    //Agregando
 
     @Override
     public List<UserDTO> listUser() {
