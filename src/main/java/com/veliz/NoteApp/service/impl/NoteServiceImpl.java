@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Service
 public class NoteServiceImpl implements NoteService {
@@ -27,6 +28,11 @@ public class NoteServiceImpl implements NoteService {
         noteDTO.setRegisterDate(LocalDateTime.now());
         noteDTO.setUser(userDAO.findById(noteDTO.getUser().getId()).get());
         return noteMapper.noteToNoteDTO(noteDAO.save(noteMapper.noteDTOToNote(noteDTO)));
+    }
+
+    @Override
+    public List<NoteDTO> listNote(long id) {
+        return noteMapper.noteListToNoteDTOList((noteDAO.listNote(id)));
     }
 
     @Override
